@@ -36,7 +36,7 @@
 1. capability를 user/domain term으로 이름 붙인다.
 2. representation crossings를 나열한다: source record, read model, UI draft, user intent, route/query state, command input, API payload, command result, realtime patch, presentation model, compatibility adapter.
 3. semantic decisions를 나열한다: identity/alias, lifecycle/status, permission/capability, command grammar, route/navigation grammar, freshness/conflict/revision/pending/fallback, projection/presentation, compatibility.
-4. decision마다 owner를 하나만 배정한다. 의미를 결정할 context와 authority가 있는 가장 작은 durable owner를 고른다. 그런 evidence와 authority가 없으면 owner를 만들지 말고 `decision needed`와 decision owner를 남긴다.
+4. decision마다 owner를 하나만 배정한다. 현재 source나 명시적 task context가 충분한 evidence와 authority를 보여줄 때만 가장 작은 durable owner를 고른다. 둘 중 하나라도 없으면 `decision needed -> missing evidence/authority`를 쓰고, 누가 결정해야 하는지는 그 decision owner가 근거로 확인되었거나 명시되었을 때만 적는다.
 5. caller boundaries를 정한다: caller는 pass, select, invoke, display, render할 수 있다. owner가 아닌 caller는 interpret, normalize, re-decide, preserve policy를 하지 않는다.
 6. 현재 task가 정당화하는 범위만 refactor한다.
 7. semantic decision이 caller로 새면 실패하는 guard를 추가한다.

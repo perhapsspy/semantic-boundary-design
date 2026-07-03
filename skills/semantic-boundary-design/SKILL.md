@@ -1,6 +1,6 @@
 ---
 name: semantic-boundary-design
-description: Use when cross-layer feature, migration, integration, port, or refactor work needs one owner for user/domain meaning across UI, route, client state, command, API, storage, realtime, adapter, or presentation layers. Trigger for identity aliases, lifecycle/status, permissions/capabilities, route/query grammar, command payloads, result/event projection, freshness/fallback/revision semantics across representations, compatibility translation, or multiple representations of the same user/domain meaning.
+description: Use when cross-layer feature, migration, integration, port, refactor, review, bug fix, or design planning needs one owner for user/domain meaning across UI, route, client state, command, API, storage, realtime, adapter, or presentation layers. Trigger for identity aliases, lifecycle/status, permissions/capabilities, route/query grammar, command payloads, result/event projection, freshness/fallback/revision semantics across representations, compatibility translation, duplicated meaning rules, or multiple representations of the same user/domain meaning. Do not use for read-only owner discovery, local flow cleanup after owners are clear, pure async responsiveness/freshness work, or scope-control alone.
 ---
 
 # Semantic Boundary Design
@@ -41,7 +41,7 @@ Do not use this skill for:
 1. Name the capability in user or domain terms.
 2. List representation crossings: source record, read model, UI draft, user intent, route/query state, command input, API payload, command result, realtime patch, presentation model, compatibility adapter.
 3. List semantic decisions: identity/alias, lifecycle/status, permission/capability, command grammar, route/navigation grammar, freshness/conflict/revision/pending/fallback, projection/presentation, compatibility.
-4. Assign one owner per decision. Pick the smallest durable owner with enough context and authority to decide the meaning. If no layer has that evidence and authority, mark `decision needed` and name the decision owner instead of inventing one.
+4. Assign one owner per decision. Pick the smallest durable owner only when current source or explicit task context shows enough evidence and authority to decide the meaning. If no layer has both, write `decision needed -> missing evidence/authority` and name who must decide only when that decision owner is evidenced or explicitly provided.
 5. Define caller boundaries: callers may pass, select, invoke, display, or render; callers must not interpret, normalize, re-decide, or preserve policy unless they own that decision.
 6. Refactor only the scope justified by the current task.
 7. Add guards that fail when semantic decisions leak into callers.

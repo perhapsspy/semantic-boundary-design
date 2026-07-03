@@ -1,4 +1,4 @@
 interface:
   display_name: "Semantic Boundary Design"
-  short_description: "Assign semantic decision owners across boundaries"
-  default_prompt: "Use $semantic-boundary-design to assign semantic decision owners before a cross-layer feature, migration, integration, or refactor."
+  short_description: "Own route, payload, status rules once"
+  default_prompt: "Use $semantic-boundary-design to assign one owner for route/query grammar, command payloads, status/permission rules, or compatibility behavior."

@@ -1,5 +1,7 @@
 # 스킬 방향
 
+배포 계약은 `skills/semantic-boundary-design/SKILL.md`가 소유한다. 이 문서는 그 계약을 언제 확장할지의 기준만 기록한다.
+
 ## 목적
 
 - cross-layer 변경에서 semantic decision owner를 하나로 정한다.

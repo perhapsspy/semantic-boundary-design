@@ -27,6 +27,13 @@ Use $semantic-boundary-design to assign owners for route/query grammar, command 
 - A compatibility adapter preserves product policy instead of translating shapes
 - Callers add `x || y || z` fallback chains or duplicate lifecycle checks
 
+## Other Skills
+
+- Existing owner discovery: `source-owner-audit`
+- Local flow cleanup after owners are clear: `structure-first`
+- Pure async freshness/responsiveness issues: `interactive-state-flow`
+- Change-scope control: `justified-change`
+
 ## More
 
 - Skill: [English](skills/semantic-boundary-design/SKILL.md) | [한국어](skills/semantic-boundary-design/SKILL.ko.md)

@@ -4,9 +4,9 @@
 
 ## 요약
 
-`semantic-boundary-design`은 여러 계층을 지나는 변경에서 의미 결정 owner를 하나로 정하게 해주는 Agent Skill입니다.
+`semantic-boundary-design`은 여러 계층을 지나는 변경에서 의미를 결정할 owner를 하나로 정하게 해주는 Agent Skill입니다.
 
-record, route, command, API payload, realtime patch, presentation model, adapter가 같은 의미를 다룰 때 caller마다 alias, status, permission, fallback, grammar, payload 규칙을 다시 해석하지 않도록 owner ledger를 먼저 만듭니다.
+record, route, command, API payload, realtime patch, presentation model, adapter가 같은 의미를 다룰 때 caller가 alias, status, permission, fallback, grammar, payload 규칙을 다시 해석하지 않도록 owner ledger를 먼저 만듭니다.
 
 ## 빠른 시작
 
@@ -26,6 +26,13 @@ $semantic-boundary-design 로 이 migration의 route/query grammar, command payl
 - identity alias, lifecycle/status, permission, route/query grammar, command payload, result/event projection이 흩어지는 변경
 - compatibility adapter가 translation을 넘어 product policy를 보존하는 변경
 - caller의 `x || y || z` fallback chain이나 중복 lifecycle check가 늘어나는 변경
+
+## 다른 스킬
+
+- 기존 owner 찾기: `source-owner-audit`
+- owner가 정해진 뒤 local flow 정리: `structure-first`
+- 순수 async freshness/responsiveness 문제: `interactive-state-flow`
+- 변경 범위 통제: `justified-change`
 
 ## 더 보기
 

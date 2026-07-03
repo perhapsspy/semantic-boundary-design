@@ -6,7 +6,7 @@
 - 기본 README는 한국어, 영어 README는 `README.en.md`다.
 - 설치 가능한 스킬은 `skills/semantic-boundary-design/`에 둔다.
 - `SKILL.md`는 frontmatter가 있는 영문 기본 스킬이다.
-- `SKILL.ko.md`는 frontmatter 없는 한국어 페어다.
+- `skills/semantic-boundary-design/SKILL.ko.md`는 frontmatter 없는 한국어 페어다.
 - `skills/semantic-boundary-design/agents/openai.yaml`은 OpenAI용 인터페이스 메타데이터다.
 - 프로젝트 라이선스는 MIT다.
 - 로컬 운영 지침은 `AGENTS.md`에 둔다.
