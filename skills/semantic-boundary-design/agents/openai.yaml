@@ -1,0 +1,4 @@
+interface:
+  display_name: "Semantic Boundary Design"
+  short_description: "Assign semantic decision owners across boundaries"
+  default_prompt: "Use $semantic-boundary-design to assign semantic owners before a cross-layer feature, migration, integration, or refactor."
