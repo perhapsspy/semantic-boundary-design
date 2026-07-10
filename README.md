@@ -30,9 +30,8 @@ $semantic-boundary-design 로 이 migration의 route/query grammar, command payl
 ## 다른 스킬
 
 - 기존 owner 찾기: `source-owner-audit`
-- owner가 정해진 뒤 local flow 정리: `structure-first`
+- owner가 정해진 뒤 변경 경계와 local flow 정리: `structure-first`
 - 순수 async freshness/responsiveness 문제: `interactive-state-flow`
-- 변경 범위 통제: `justified-change`
 
 ## 더 보기
 

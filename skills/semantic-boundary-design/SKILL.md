@@ -25,16 +25,15 @@ Do not use this skill for:
 
 - tiny local edits with no semantic boundary movement
 - read-only discovery of existing owners; use `source-owner-audit`
-- local flow cleanup after owners are clear; use `structure-first`
+- local change-boundary or flow cleanup after owners are clear; use `structure-first`
 - pure async freshness, responsiveness, or race-prone interaction work; use `interactive-state-flow`
-- change-scope control alone; use `justified-change`
+- change-scope control alone; use `structure-first`
 
 ## Adjacent Skills
 
 - `source-owner-audit` finds current source owners from evidence. This skill places semantic decisions once the owner question needs design.
-- `structure-first` shapes the current unit after owners are known. This skill starts at the capability-wide owner ledger.
+- `structure-first` bounds and shapes the current unit after owners are known. This skill starts at the capability-wide owner ledger.
 - `interactive-state-flow` specializes in freshness, pending, stale, and async presentation behavior. This skill handles freshness/fallback/revision only when it is semantic contract ownership across representations.
-- `justified-change` keeps implementation scope proportional. This skill decides where meaning-defining rules belong.
 
 ## Operating Flow
 

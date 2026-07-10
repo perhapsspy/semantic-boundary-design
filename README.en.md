@@ -30,9 +30,8 @@ Use $semantic-boundary-design to assign owners for route/query grammar, command 
 ## Other Skills
 
 - Existing owner discovery: `source-owner-audit`
-- Local flow cleanup after owners are clear: `structure-first`
+- Change-boundary and local flow cleanup after owners are clear: `structure-first`
 - Pure async freshness/responsiveness issues: `interactive-state-flow`
-- Change-scope control: `justified-change`
 
 ## More
 

@@ -18,9 +18,8 @@
 ## 인접 스킬 경계
 
 - `source-owner-audit`: 현재 source owner를 읽기 전용으로 찾는다.
-- `structure-first`: owner가 정해진 뒤 current unit의 flow와 atom을 다듬는다.
+- `structure-first`: owner가 정해진 뒤 current unit의 변경 경계, flow, atom을 다듬는다.
 - `interactive-state-flow`: freshness, pending, stale, async presentation behavior에 특화된다. 이 스킬은 freshness가 representation 사이 semantic contract일 때만 다룬다.
-- `justified-change`: 변경 범위를 비례적이고 검증 가능하게 유지한다.
 
 ## 범위 밖
 

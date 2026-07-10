@@ -20,16 +20,15 @@
 
 - semantic boundary 이동이 없는 작은 local edit.
 - 기존 owner를 읽기 전용으로 찾는 일. 이때는 `source-owner-audit`.
-- owner가 명확한 뒤 local flow를 정리하는 일. 이때는 `structure-first`.
+- owner가 명확한 뒤 local 변경 경계나 flow를 정리하는 일. 이때는 `structure-first`.
 - 순수 async freshness, responsiveness, race-prone interaction 작업. 이때는 `interactive-state-flow`.
-- change scope만 통제하는 일. 이때는 `justified-change`.
+- change scope만 통제하는 일. 이때는 `structure-first`.
 
 ## 인접 스킬
 
 - `source-owner-audit`는 현재 source owner를 근거로 찾는다. 이 스킬은 owner 배치가 설계 문제가 된 뒤 semantic decision을 배정한다.
-- `structure-first`는 owner가 정해진 뒤 current unit을 다듬는다. 이 스킬은 capability-wide owner ledger에서 시작한다.
+- `structure-first`는 owner가 정해진 뒤 current unit의 경계를 잡고 구조를 다듬는다. 이 스킬은 capability-wide owner ledger에서 시작한다.
 - `interactive-state-flow`는 freshness, pending, stale, async presentation behavior에 특화된다. 이 스킬은 freshness/fallback/revision이 representation 사이 semantic contract ownership일 때만 다룬다.
-- `justified-change`는 implementation scope를 비례적으로 유지한다. 이 스킬은 meaning-defining rule이 어디에 살아야 하는지 정한다.
 
 ## Operating Flow
 
