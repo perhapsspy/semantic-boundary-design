@@ -4,9 +4,7 @@
 
 ## 요약
 
-`semantic-boundary-design`은 여러 계층을 지나는 변경에서 의미를 결정할 owner를 하나로 정하게 해주는 Agent Skill입니다.
-
-record, route, command, API payload, realtime patch, presentation model, adapter가 같은 의미를 다룰 때 caller가 alias, status, permission, fallback, grammar, payload 규칙을 다시 해석하지 않도록 owner ledger를 먼저 만듭니다.
+화면, API와 저장소가 같은 ID·상태·권한을 서로 다르게 해석하는 문제를 막습니다. 여러 계층을 지나는 규칙을 어디에서 한 번 결정할지 정해 각 계층이 같은 뜻을 다시 만들지 않게 합니다.
 
 ## 빠른 시작
 
@@ -17,15 +15,15 @@ npx skills add perhapsspy/semantic-boundary-design
 또는 `skills/semantic-boundary-design`를 에이전트 스킬 디렉터리에 복사합니다.
 
 ```text
-$semantic-boundary-design 로 이 migration의 route/query grammar, command payload, realtime patch owner를 정리해줘.
+$semantic-boundary-design 이 상태와 권한 규칙을 어디에서 결정해야 모든 화면과 API가 같게 동작하는지 정리해줘.
 ```
 
 ## 이런 때 사용
 
-- UI, route, client state, command, API, storage, realtime, adapter, presentation을 가로지르는 변경
-- identity alias, lifecycle/status, permission, route/query grammar, command payload, result/event projection이 흩어지는 변경
-- compatibility adapter가 translation을 넘어 product policy를 보존하는 변경
-- caller의 `x || y || z` fallback chain이나 중복 lifecycle check가 늘어나는 변경
+- 화면, API, 저장소를 함께 바꾸는 기능이나 migration
+- 같은 ID, 상태나 권한 규칙이 여러 파일에서 반복되는 변경
+- 호환 코드가 데이터 형식뿐 아니라 제품 동작까지 결정하려는 경우
+- `x || y || z` 같은 fallback이나 상태 검사가 여러 호출부에서 늘어나는 경우
 
 ## 다른 스킬
 

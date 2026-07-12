@@ -4,9 +4,7 @@
 
 ## Summary
 
-`semantic-boundary-design` is an Agent Skill for assigning one semantic decision owner before cross-layer changes drift.
-
-When records, routes, commands, API payloads, realtime patches, presentation models, and adapters handle the same meaning, the skill builds an owner ledger so callers do not reinterpret aliases, statuses, permissions, fallbacks, grammar, or payload rules.
+`semantic-boundary-design` prevents screens, APIs, and storage from interpreting the same ID, status, or permission differently. It chooses one place to decide each cross-layer rule so every layer does not recreate the same meaning.
 
 ## Quick Start
 
@@ -17,15 +15,15 @@ npx skills add perhapsspy/semantic-boundary-design
 Or copy `skills/semantic-boundary-design` into your agent skills directory.
 
 ```text
-Use $semantic-boundary-design to assign owners for route/query grammar, command payloads, and realtime patch meaning in this migration.
+Use $semantic-boundary-design to decide where these status and permission rules should live so every screen and API behaves consistently.
 ```
 
 ## Use When
 
-- A change crosses UI, route, client state, command, API, storage, realtime, adapter, or presentation layers
-- Identity aliases, lifecycle/status, permission, route/query grammar, command payloads, or result/event projection are spreading across callers
-- A compatibility adapter preserves product policy instead of translating shapes
-- Callers add `x || y || z` fallback chains or duplicate lifecycle checks
+- A feature or migration changes screens, APIs, and storage together
+- The same ID, status, or permission rule is repeated in several files
+- Compatibility code is deciding product behavior instead of only translating data
+- `x || y || z` fallbacks or lifecycle checks keep spreading across callers
 
 ## Other Skills
 
